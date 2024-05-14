@@ -49,6 +49,8 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=1 \
     PIP_DEFAULT_TIMEOUT=100 \
     C_FORCE_ROOT=true \
-    REQUIREMENTS_FILE_PATH=requirements.yaml
-COPY ${REQUIREMENTS_FILE_PATH} /tmp/requirements.yaml
-RUN conda env update --file /tmp/requirements.yaml --name base && conda clean -y -a
+    REQUIREMENTS_FILE_PATH=requirements.txt
+RUN conda install pip setuptools wheel -c conda-forge
+COPY ${REQUIREMENTS_FILE_PATH} /tmp/requirements.txt
+RUN pip install --no-cache-dir --extra-index-url https://download.pytorch.org/whl/cu118 -r /tmp/requirements.txt
+RUN conda clean -y -a

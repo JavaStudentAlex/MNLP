@@ -1,0 +1,26 @@
+# basics
+numpy
+pandas
+scipy
+scikit-learn
+
+# plotting
+matplotlib
+plotly
+seaborn
+
+# jupyter
+jupyterlab
+ipywidgets
+jupyterlab-widgets
+notebook
+
+# ML frameworks
+keras
+torch
+torchvision
+torchaudio
+tensorboard
+transformers
+accelerate
+bitsandbytes
