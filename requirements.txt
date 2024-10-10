@@ -14,6 +14,9 @@ jupyterlab
 ipywidgets
 jupyterlab-widgets
 notebook
+nbconvert
+pandoc
+kaleido
 
 # ML frameworks
 keras

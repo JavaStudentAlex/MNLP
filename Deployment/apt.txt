@@ -1,1 +1,1 @@
-wget build-essential git locales
+wget build-essential git locales texlive-xetex texlive-fonts-recommended texlive-plain-generic pandoc
